@@ -3,6 +3,7 @@ package com.example.hitcapp;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
+<<<<<<< HEAD
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +11,11 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 
+=======
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
+>>>>>>> ea741600f12e115c19f0f8c47620ed7245337f37
 public class ProductDetailActivity extends AppCompatActivity {
 
     @Override
@@ -28,7 +34,10 @@ public class ProductDetailActivity extends AppCompatActivity {
         ImageView imgProductDetail = findViewById(R.id.imgProductDetail);
         TextView tvProductNameDetail = findViewById(R.id.tvProductNameDetail);
         TextView tvProductPriceDetail = findViewById(R.id.tvProductPriceDetail);
+<<<<<<< HEAD
         ExtendedFloatingActionButton fabAddToCart = findViewById(R.id.fabAddToCart);
+=======
+>>>>>>> ea741600f12e115c19f0f8c47620ed7245337f37
 
         // Nhận dữ liệu từ Intent
         String name = getIntent().getStringExtra("product_name");
@@ -38,6 +47,7 @@ public class ProductDetailActivity extends AppCompatActivity {
         tvProductNameDetail.setText(name);
         tvProductPriceDetail.setText("$" + price);
         imgProductDetail.setImageResource(image);
+<<<<<<< HEAD
 
         // Xử lý thêm vào giỏ hàng
         fabAddToCart.setOnClickListener(v -> {
@@ -47,3 +57,7 @@ public class ProductDetailActivity extends AppCompatActivity {
         });
     }
 }
+=======
+    }
+}
+>>>>>>> ea741600f12e115c19f0f8c47620ed7245337f37
