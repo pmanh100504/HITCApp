@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.material.button.MaterialButton;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -39,7 +41,8 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
         Product product = item.getProduct();
 
         holder.tvName.setText(product.getName());
-        holder.tvPrice.setText(String.format("$%.2f", product.getPrice()));
+        java.text.NumberFormat formatter = java.text.NumberFormat.getCurrencyInstance(new java.util.Locale("vi", "VN"));
+        holder.tvPrice.setText(formatter.format(product.getPrice()));
         holder.tvQuantity.setText(String.valueOf(item.getQuantity()));
         holder.imgProduct.setImageResource(product.getImageResource());
 
@@ -71,7 +74,8 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
     }
 
     static class CartViewHolder extends RecyclerView.ViewHolder {
-        ImageView imgProduct, btnMinus, btnPlus, btnRemove;
+        ImageView imgProduct, btnMinus, btnPlus;
+        MaterialButton btnRemove;
         TextView tvName, tvPrice, tvQuantity;
 
         public CartViewHolder(@NonNull View itemView) {

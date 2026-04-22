@@ -7,4 +7,11 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
+    <color name="primary">#46C3FB</color>
+    <color name="primary_dark">#0094C8</color>
+    <color name="accent">#FF5252</color>
+    <color name="background">#F8F9FA</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="gray_light">#EEEEEE</color>
 </resources>

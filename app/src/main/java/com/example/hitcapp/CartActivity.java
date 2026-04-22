@@ -1,6 +1,5 @@
 package com.example.hitcapp;
 
-<<<<<<< HEAD
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -20,23 +19,16 @@ public class CartActivity extends AppCompatActivity implements CartAdapter.OnCar
 
     private RecyclerView rvCart;
     private CartAdapter cartAdapter;
-    private TextView tvTotalPrice, tvEmptyCart;
+    private TextView tvTotalPrice;
+    private View tvEmptyCart;
     private MaterialButton btnCheckOut;
     private View layoutCheckout;
-=======
-import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
-public class CartActivity extends AppCompatActivity {
->>>>>>> ea741600f12e115c19f0f8c47620ed7245337f37
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart);
 
-<<<<<<< HEAD
         initViews();
         setupToolbar();
         setupRecyclerView();
@@ -91,11 +83,3 @@ public class CartActivity extends AppCompatActivity {
         updateUI();
     }
 }
-=======
-        Toolbar toolbar = findViewById(R.id.toolbarCart);
-        setSupportActionBar(toolbar);
-        
-        toolbar.setNavigationOnClickListener(v -> finish());
-    }
-}
->>>>>>> ea741600f12e115c19f0f8c47620ed7245337f37

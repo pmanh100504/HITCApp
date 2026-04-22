@@ -7,35 +7,16 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
-<<<<<<< HEAD
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FFFFFF">
+        android:background="@color/background">
 
-=======
-    <!-- Main Content -->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-<<<<<<< HEAD
-        android:background="#FFFFFF">
-
-        <!-- Toolbar với Thanh tìm kiếm và Giỏ hàng -->
-=======
-        android:background="#F5F5F5">
-
->>>>>>> f9bed0332c84ce794b98567432af0edc3024df0c
->>>>>>> ea741600f12e115c19f0f8c47620ed7245337f37
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#46C3FB"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ea741600f12e115c19f0f8c47620ed7245337f37
+            android:background="@color/primary"
             android:elevation="4dp"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -45,20 +26,22 @@
 
                 <ImageView
                     android:id="@+id/btnMenu"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:padding="2dp"
                     android:src="@android:drawable/ic_menu_sort_by_size"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:tint="@color/black" />
+                    app:tint="@color/white" />
 
                 <EditText
                     android:id="@+id/etSearch"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_marginHorizontal="12dp"
-                    android:background="@android:color/white"
+                    android:background="@drawable/ic_launcher_background"
+                    android:backgroundTint="#F0F0F0"
                     android:hint="Tìm kiếm sản phẩm..."
                     android:paddingHorizontal="12dp"
                     android:textSize="14sp"
@@ -71,176 +54,87 @@
 
                 <ImageView
                     android:id="@+id/btnCartTop"
-                    android:layout_width="28dp"
-                    android:layout_height="28dp"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
                     android:layout_marginEnd="16dp"
+                    android:padding="4dp"
                     android:src="@drawable/cart"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:tint="@color/black" />
+                    app:tint="@color/white" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.appcompat.widget.Toolbar>
 
-<<<<<<< HEAD
-=======
-        <!-- Vùng cuộn nội dung -->
->>>>>>> ea741600f12e115c19f0f8c47620ed7245337f37
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:fillViewport="true"
             app:layout_constraintBottom_toBottomOf="parent"
-<<<<<<< HEAD
-=======
-=======
-            app:layout_constraintTop_toTopOf="parent"
-            app:navigationIcon="@android:drawable/ic_menu_sort_by_size"
-            app:title="Home"
-            app:titleTextColor="@color/black" />
-
-        <androidx.core.widget.NestedScrollView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@id/btnLogout"
->>>>>>> f9bed0332c84ce794b98567432af0edc3024df0c
->>>>>>> ea741600f12e115c19f0f8c47620ed7245337f37
             app:layout_constraintTop_toBottomOf="@id/toolbar">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-<<<<<<< HEAD
                 android:paddingBottom="24dp">
 
-=======
-<<<<<<< HEAD
-                android:paddingBottom="24dp">
-
-                <!-- Welcome Card -->
-=======
-                android:paddingBottom="16dp">
-
->>>>>>> f9bed0332c84ce794b98567432af0edc3024df0c
->>>>>>> ea741600f12e115c19f0f8c47620ed7245337f37
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cardWelcome"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
                     app:cardCornerRadius="16dp"
-<<<<<<< HEAD
-                    app:cardElevation="2dp">
+                    app:cardElevation="0dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/gray_light">
 
-=======
-<<<<<<< HEAD
-                    app:cardElevation="2dp">
-=======
-                    app:cardElevation="4dp">
-
->>>>>>> f9bed0332c84ce794b98567432af0edc3024df0c
->>>>>>> ea741600f12e115c19f0f8c47620ed7245337f37
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-<<<<<<< HEAD
-                        android:padding="20dp">
+                        android:padding="16dp">
 
-=======
-<<<<<<< HEAD
-                        android:padding="20dp">
-=======
-                        android:padding="24dp">
-
->>>>>>> f9bed0332c84ce794b98567432af0edc3024df0c
->>>>>>> ea741600f12e115c19f0f8c47620ed7245337f37
                         <TextView
                             android:id="@+id/tvWelcomeUser"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ea741600f12e115c19f0f8c47620ed7245337f37
                             android:text="Welcome Back!"
-                            android:textColor="@color/black"
+                            android:textColor="@color/text_primary"
                             android:textSize="20sp"
                             android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bạn muốn mua gì hôm nay?"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="14sp" />
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
-<<<<<<< HEAD
-=======
-                <!-- Slider -->
->>>>>>> ea741600f12e115c19f0f8c47620ed7245337f37
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cardSlider"
                     android:layout_width="match_parent"
                     android:layout_height="180dp"
                     android:layout_marginHorizontal="16dp"
-                    app:cardCornerRadius="16dp"
-                    app:cardElevation="2dp">
-<<<<<<< HEAD
-
-=======
-=======
-                            android:text="Welcome Back, User!"
-                            android:textColor="@color/black"
-                            android:textSize="22sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="You have successfully logged in."
-                            android:textColor="#666666"
-                            android:textSize="16sp" />
-
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/cardSlider"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:layout_marginHorizontal="16dp"
-                    app:cardCornerRadius="16dp"
+                    app:cardCornerRadius="20dp"
                     app:cardElevation="4dp">
 
->>>>>>> f9bed0332c84ce794b98567432af0edc3024df0c
->>>>>>> ea741600f12e115c19f0f8c47620ed7245337f37
                     <ViewFlipper
                         android:id="@+id/viewFlipper"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:autoStart="true"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                        android:flipInterval="3000">
-=======
->>>>>>> ea741600f12e115c19f0f8c47620ed7245337f37
                         android:flipInterval="3000"
                         android:inAnimation="@android:anim/slide_in_left"
                         android:outAnimation="@android:anim/slide_out_right">
 
-<<<<<<< HEAD
-=======
->>>>>>> f9bed0332c84ce794b98567432af0edc3024df0c
->>>>>>> ea741600f12e115c19f0f8c47620ed7245337f37
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:scaleType="centerCrop"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ea741600f12e115c19f0f8c47620ed7245337f37
                             android:src="@drawable/hinh1" />
                         <ImageView
                             android:layout_width="match_parent"
@@ -250,21 +144,30 @@
                     </ViewFlipper>
                 </com.google.android.material.card.MaterialCardView>
 
-                <TextView
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="16dp"
                     android:layout_marginTop="24dp"
-                    android:layout_marginBottom="8dp"
-                    android:text="Sản phẩm nổi bật"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:layout_marginBottom="8dp">
 
-<<<<<<< HEAD
-=======
-                <!-- Danh sách sản phẩm -->
->>>>>>> ea741600f12e115c19f0f8c47620ed7245337f37
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sản phẩm nổi bật"
+                        android:textColor="@color/text_primary"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="Xem tất cả"
+                        android:textColor="@color/primary"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rvProducts"
                     android:layout_width="match_parent"
@@ -280,141 +183,79 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-<<<<<<< HEAD
-=======
-    <!-- Navigation Drawer (Menu trái có nút Logout) -->
-=======
-                            android:src="@drawable/ic_launcher_background" />
-
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="#FF9800"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/ic_launcher_foreground" />
-
-                    </ViewFlipper>
-                </com.google.android.material.card.MaterialCardView>
-
-            </LinearLayout>
-        </androidx.core.widget.NestedScrollView>
-
-        <Button
-            android:id="@+id/btnLogout"
-            android:layout_width="200dp"
-            android:layout_height="56dp"
-            android:layout_marginBottom="16dp"
-            android:text="Logout"
-            android:textAllCaps="false"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:cornerRadius="28dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <!-- Navigation Drawer -->
->>>>>>> f9bed0332c84ce794b98567432af0edc3024df0c
->>>>>>> ea741600f12e115c19f0f8c47620ed7245337f37
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigation_view"
-        android:layout_width="wrap_content"
+        android:layout_width="280dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:background="@color/white">
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
->>>>>>> ea741600f12e115c19f0f8c47620ed7245337f37
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <LinearLayout
                 android:id="@+id/drawer_header"
-<<<<<<< HEAD
-=======
-=======
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TextView
->>>>>>> f9bed0332c84ce794b98567432af0edc3024df0c
->>>>>>> ea741600f12e115c19f0f8c47620ed7245337f37
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#46C3FB"
-                android:padding="16dp"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ea741600f12e115c19f0f8c47620ed7245337f37
+                android:layout_height="180dp"
+                android:background="@color/primary"
+                android:gravity="bottom"
+                android:padding="24dp"
                 android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    app:cardCornerRadius="32dp"
+                    app:cardElevation="0dp"
+                    android:layout_marginBottom="12dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_launcher_foreground"
+                        android:background="@color/white"
+                        android:padding="8dp"/>
+                </com.google.android.material.card.MaterialCardView>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Menu"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
+                    android:text="User Name"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="user@email.com"
+                    android:textColor="#E0E0E0"
+                    android:textSize="14sp" />
             </LinearLayout>
-<<<<<<< HEAD
-=======
-=======
-                android:text="Menu"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold" />
->>>>>>> f9bed0332c84ce794b98567432af0edc3024df0c
->>>>>>> ea741600f12e115c19f0f8c47620ed7245337f37
 
             <ListView
                 android:id="@+id/lvCategoryDrawer"
                 android:layout_width="match_parent"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ea741600f12e115c19f0f8c47620ed7245337f37
                 android:layout_height="wrap_content"
                 android:layout_below="@id/drawer_header"
                 android:layout_above="@+id/btnDrawerLogout"
-                android:divider="#EEEEEE"
-                android:dividerHeight="1dp" />
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0dp"
+                android:paddingTop="12dp"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnDrawerLogout"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_margin="16dp"
-                android:text="Logout"
+                android:text="Đăng xuất"
                 android:textAllCaps="false"
-                android:textColor="@color/white"
-                app:backgroundTint="#FF5252"
-                app:cornerRadius="8dp"
+                android:textColor="@color/accent"
                 app:icon="@android:drawable/ic_lock_power_off"
-                app:iconTint="@color/white" />
+                app:iconTint="@color/accent" />
 
         </RelativeLayout>
-<<<<<<< HEAD
     </com.google.android.material.navigation.NavigationView>
 
 </androidx.drawerlayout.widget.DrawerLayout>
-=======
-=======
-                android:layout_height="match_parent"
-                android:divider="#EEEEEE"
-                android:dividerHeight="1dp" />
-        </LinearLayout>
-
->>>>>>> f9bed0332c84ce794b98567432af0edc3024df0c
-    </com.google.android.material.navigation.NavigationView>
-
-</androidx.drawerlayout.widget.DrawerLayout>
->>>>>>> ea741600f12e115c19f0f8c47620ed7245337f37

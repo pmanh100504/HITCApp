@@ -8,10 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-<<<<<<< HEAD
 import android.widget.Toast;
-=======
->>>>>>> ea741600f12e115c19f0f8c47620ed7245337f37
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,13 +33,11 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
     public void onBindViewHolder(@NonNull ProductViewHolder holder, int position) {
         Product product = productList.get(position);
         holder.tvProductName.setText(product.getName());
-        holder.tvProductPrice.setText("$" + product.getPrice());
+        java.text.NumberFormat formatter = java.text.NumberFormat.getCurrencyInstance(new java.util.Locale("vi", "VN"));
+        holder.tvProductPrice.setText(formatter.format(product.getPrice()));
         holder.imgProduct.setImageResource(product.getImageResource());
 
-<<<<<<< HEAD
         // Xử lý khi click vào item để xem chi tiết
-=======
->>>>>>> ea741600f12e115c19f0f8c47620ed7245337f37
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(v.getContext(), ProductDetailActivity.class);
             intent.putExtra("product_name", product.getName());
@@ -50,15 +45,14 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
             intent.putExtra("product_image", product.getImageResource());
             v.getContext().startActivity(intent);
         });
-<<<<<<< HEAD
 
         // Xử lý khi click vào nút "Add to Cart"
-        holder.btnAddToCart.setOnClickListener(v -> {
-            CartManager.getInstance().addProduct(product);
-            Toast.makeText(v.getContext(), "Đã thêm " + product.getName() + " vào giỏ hàng", Toast.LENGTH_SHORT).show();
-        });
-=======
->>>>>>> ea741600f12e115c19f0f8c47620ed7245337f37
+        if (holder.btnAddToCart != null) {
+            holder.btnAddToCart.setOnClickListener(v -> {
+                CartManager.getInstance().addProduct(product);
+                Toast.makeText(v.getContext(), "Đã thêm " + product.getName() + " vào giỏ hàng", Toast.LENGTH_SHORT).show();
+            });
+        }
     }
 
     @Override
@@ -85,23 +79,14 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
     static class ProductViewHolder extends RecyclerView.ViewHolder {
         ImageView imgProduct;
         TextView tvProductName, tvProductPrice;
-<<<<<<< HEAD
         View btnAddToCart;
-=======
->>>>>>> ea741600f12e115c19f0f8c47620ed7245337f37
 
         public ProductViewHolder(@NonNull View itemView) {
             super(itemView);
             imgProduct = itemView.findViewById(R.id.imgProduct);
             tvProductName = itemView.findViewById(R.id.tvProductName);
             tvProductPrice = itemView.findViewById(R.id.tvProductPrice);
-<<<<<<< HEAD
             btnAddToCart = itemView.findViewById(R.id.btnAddToCart);
         }
     }
 }
-=======
-        }
-    }
-}
->>>>>>> ea741600f12e115c19f0f8c47620ed7245337f37

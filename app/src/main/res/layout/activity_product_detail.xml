@@ -83,11 +83,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:lineSpacingExtra="4dp"
-<<<<<<< HEAD
-                android:text="Mô tả chi tiết sản phẩm tại đây."
-=======
                 android:text="Đây là mô tả chi tiết của sản phẩm. Bạn có thể thêm thông tin về cấu hình, tính năng nổi bật hoặc các chương trình khuyến mãi đi kèm tại đây."
->>>>>>> ea741600f12e115c19f0f8c47620ed7245337f37
                 android:textColor="#666666"
                 android:textSize="16sp" />
 
@@ -106,8 +102,4 @@
         app:icon="@android:drawable/ic_input_add"
         app:iconTint="@color/white" />
 
-<<<<<<< HEAD
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
-=======
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
->>>>>>> ea741600f12e115c19f0f8c47620ed7245337f37

@@ -77,22 +77,34 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        if (cbRememberMe.isChecked()) {
-            editor.putString(KEY_USERNAME, username);
-            editor.putString(KEY_PASSWORD, password);
-            editor.putBoolean(KEY_REMEMBER, true);
-        } else {
-            editor.clear();
-        }
-        editor.apply();
+        // Lấy thông tin tài khoản đã đăng ký (mặc định là admin/123456 nếu chưa đăng ký)
+        SharedPreferences userPrefs = getSharedPreferences("user_data", MODE_PRIVATE);
+        String savedUsername = userPrefs.getString("username", "admin");
+        String savedPassword = userPrefs.getString("password", "123456");
 
-        Toast.makeText(this, "Đăng nhập thành công!", Toast.LENGTH_SHORT).show();
-        
-        // Chuyển sang màn hình Home sau khi login thành công
-        Intent intent = new Intent(MainActivity.this, HomeActivity.class);
-        intent.putExtra("USERNAME", username);
-        startActivity(intent);
-        finish();
+        if (username.equals(savedUsername) && password.equals(savedPassword)) {
+            // Lưu trạng thái Remember Me
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            if (cbRememberMe.isChecked()) {
+                editor.putString(KEY_USERNAME, username);
+                editor.putString(KEY_PASSWORD, password);
+                editor.putBoolean(KEY_REMEMBER, true);
+            } else {
+                editor.clear();
+            }
+            editor.apply();
+
+            Toast.makeText(this, "Đăng nhập thành công!", Toast.LENGTH_SHORT).show();
+
+            // Chuyển sang màn hình Home sau khi login thành công
+            Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+            intent.putExtra("USERNAME", username);
+            startActivity(intent);
+            finish();
+        } else {
+            // Thông báo khi sai tài khoản hoặc mật khẩu
+            Toast.makeText(this, "Tên đăng nhập hoặc mật khẩu không đúng!", Toast.LENGTH_SHORT).show();
+            etPassword.setText(""); // Xóa mật khẩu khi nhập sai
+        }
     }
 }

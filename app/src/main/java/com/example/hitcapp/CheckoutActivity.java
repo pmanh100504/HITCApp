@@ -65,7 +65,8 @@ public class CheckoutActivity extends AppCompatActivity {
 
     private void displaySummary() {
         double total = CartManager.getInstance().getTotalPrice();
-        tvSummaryTotal.setText(String.format(Locale.US, "$%.2f", total));
+        java.text.NumberFormat formatter = java.text.NumberFormat.getCurrencyInstance(new java.util.Locale("vi", "VN"));
+        tvSummaryTotal.setText(formatter.format(total));
     }
 
     private boolean validateInput() {

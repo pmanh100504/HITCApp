@@ -23,17 +23,11 @@
         </activity>
         <activity android:name=".SignUpActivity" />
         <activity android:name=".HomeActivity" />
-<<<<<<< HEAD
         <activity android:name=".ProductDetailActivity" />
         <activity android:name=".CartActivity" />
         <activity android:name=".CategoryActivity" />
         <activity android:name=".CheckoutActivity" />
-=======
-<<<<<<< HEAD
-        <activity android:name=".ProductDetailActivity" />
-=======
->>>>>>> f9bed0332c84ce794b98567432af0edc3024df0c
->>>>>>> ea741600f12e115c19f0f8c47620ed7245337f37
+        <activity android:name=".AboutActivity" />
     </application>
 
 </manifest>

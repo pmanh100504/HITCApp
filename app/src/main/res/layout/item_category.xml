@@ -29,7 +29,7 @@
                 android:layout_height="match_parent"
                 android:padding="12dp"
                 android:src="@drawable/ic_launcher_foreground"
-                app:tint="@color/purple_500" />
+                app:tint="@color/black" />
         </com.google.android.material.card.MaterialCardView>
 
         <TextView
@@ -45,11 +45,7 @@
 
         <ImageView
             android:layout_width="24dp"
-<<<<<<< HEAD
-            android:layout_height="16dp"
-=======
             android:layout_height="22dp"
->>>>>>> ea741600f12e115c19f0f8c47620ed7245337f37
             android:src="@android:drawable/ic_media_play"
             app:tint="#CCCCCC" />
 
